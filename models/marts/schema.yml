@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: customers
+    description: One row per customer with lifetime order stats.
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: orders
+    description: One row per order with payment breakdown.
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
