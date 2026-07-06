@@ -1,0 +1,12 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: 'not needed'
+      user: 'not needed'
+      role: ACCOUNTADMIN
+      database: jaffle_shop_db
+      schema: dev
+      warehouse: dbt_wh
+      threads: 4
