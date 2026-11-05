@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: customers
-    description: One row per customer with lifetime order stats.
+    description: One row per customer with lifetime order stats. test
     columns:
       - name: customer_id
         tests:
